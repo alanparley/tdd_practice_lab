@@ -15,10 +15,13 @@ class HighScoresTest(unittest.TestCase):
         self.assertEqual(811, latest(self.scores))
 
         # Test personal best (the highest score in the list)
+    def test_personal_best(self):
+        self.assertEqual(901, personal_best(self.scores))
 
-        # Test top three from list of scores
-    # def test_fizz_buzz__3_returns_fizz(self):
-    #     self.assertEqual("fizz", fizz_buzz(3))
+    # Test top three from list of scores
+    def test_personal_top_three(self):
+        self.assertEqual([765, 811, 901], personal_top_three(self.scores))
+
     # Test ordered from highest tp lowest
 
     # Test top three when there is a tie
